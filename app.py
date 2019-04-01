@@ -492,5 +492,7 @@ api.add_resource(All_Preferenze, '/Preferenze')
 api.add_resource(Preferenze_List, '/Preferenze/<string:cliente>')
 api.add_resource(All_Prenotazioni, '/Prenotazioni')
 api.add_resource(Prenotazioni_List, '/Prenotazioni/<string:codice_carrello>')
+
 if __name__=='__main__':
+    
     app.run(debug=True)
