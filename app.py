@@ -1,15 +1,12 @@
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
 from flask import Flask
 from flask_restful import Resource, reqparse, Api
 import ast
 import json
-
 app = Flask(__name__)
 api = Api(app)
-
 from base import *
-
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 scope = ['https://www.googleapis.com/auth/drive']
 creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
 client = gspread.authorize(creds)
